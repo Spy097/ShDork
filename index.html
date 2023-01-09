@@ -1,0 +1,118 @@
+<html lang="en">
+<head>
+<meta content="text/html; charset=utf-8">
+<title>Shodan Dorks</title>
+<link rel="SHORTCUT ICON" href="https://www.shodan.io/static/img/favicon.png">
+<link href="https://fonts.googleapis.com/css?family=Merienda+One" rel="stylesheet" type="text/css">
+<style>
+    body {
+       
+        background-image: url(doker.jpg);
+        background-repeat: no-repeat;
+        background-size:100%;
+        background-color: black;
+        color:rgb(255, 255, 255);
+        font-size: 120%;
+        font-family:"Merienda One";
+        font-weight: bold;
+        padding: 0%;
+     }
+    a {
+        color:rgb(255, 255, 255);
+        text-decoration:none;
+        
+    }
+    a:hover {
+        color:#d04834;
+    }
+    #spech:hover{
+        color: #FFF;
+    }
+    * {
+        box-sizing: border-box;
+    }
+    #zer{
+    position: fixed;
+    top: 1%;
+    left:32%;
+    }
+    #fir{
+    position: fixed;
+    top: 32%;
+    left: 10%;
+    }
+
+    #sec{
+    position: fixed;
+    top: 32%;
+    right: 15%;
+    }
+    #end{
+    position: fixed;
+    bottom: 1%;
+    left: 33%;
+    }
+    input{
+        
+	    overflow: hidden;
+	    color:rgb(255, 255, 255);
+        background: transparent;
+	    border-radius:5px;
+	    border: 2px solid;
+        font-family: unset;
+	    font-size:100%;
+        text-align: center;
+	    height:32%;
+        width: 50%;
+	    
+    }
+</style>
+</head>
+<body>
+    <script src="sandbox.js"></script>
+    <div class="main">
+    <div style="display: inline-block; text-align: left;" id="zer">
+    <div style="font-family: Merienda One;text-align: center;font-size: 25pt;text-shadow: 0 0 6px #FF0000, 0 0 5px #FF0000, 0 0 5px #FF0000;color: #FFF">Shodan-Dork<br></div><br/>
+    <div style="font-family: Merienda One;text-align: center;font-size: 16pt;text-shadow: 0 0 6px #FF0000, 0 0 5px #FF0000, 0 0 5px #FF0000;color: #FFF">by <a id="spech" href="https://www.linkedin.com/in/ahmed-ali-2a9627141/">Spy097</a><br></div><br/>
+    <div style="text-align: center;"><b>Target Domain :) type ssl:"target" or org:"target"</b><br><br>
+    <input type="text" name="link" id="link" placeholder='org:"google"'>
+    <br><br>
+    </div>
+    <div style="display: inline-block; text-align: left;" id="fir">
+    <a href="#" onclick="shodin('http.favicon.hash:-356182173')">RCE Centos Web Panel</a>
+    <br><br>
+    <a href="#" onclick="shodin('http.favicon.hash:-305179312')">RCE Confluence</a>
+    <br><br>
+    <a href="#" onclick="shodin('http.favicon.hash:-1250474341')">RCE SAAS</a>
+    <br><br>
+    <a href="#" onclick='shodin(`"webvpnlogin=1"`)'> Cisco ASA/FTD for Path Traversal</a>
+    <br><br>
+    <a href="#" onclick='shodin(`http.title:"grafana"`)'>Grafana for Path Traversal </a>
+    <br><br>
+    <a href="#" onclick="shodin('product:MySQL')">product MySQL</a>
+    <br><br>
+    <a href="#" onclick='shodin(`"Set-Cookie: mongo-express=" "200 OK"`)'>MongoDB Web</a>
+    <br><br>
+    <a href="#" onclick='shodin(`"X-Jenkins" "Set-Cookie: JSESSIONID" http.title:"Dashboard"`)'>Jenkins Server</a>
+    </div>
+    <div style="display: inline-block; text-align: left;" id="sec">
+    <a href="#" onclick="shodin('ssl.cert.expired:true')">SSL Expired certificates</a>
+    <br><br>
+    <a href="#" onclick='shodin(`remote desktop "port:3389"`)'>Windows Remote Desktop</a>
+    <br><br>
+    <a href="#" onclick='shodin(`access-control-allow-origin`)'>CORS Misconfiguration</a>
+    <br><br>
+    <a href="#" onclick='shodin(`"authentication disabled" "RFB 003.008"`)'> Linux VNC</a>
+    <br><br>
+    <a href="#" onclick='shodin(`http.favicon.hash:"-476231906"`)'>Php MyAdmin</a>
+    <br><br>
+    <a href="#" onclick='shodin(`product:tomcat`)'>Tomcat log4j</a>
+    <br><br>
+    <a href="#" onclick='shodin(`http.title:"Index of /"`)'>Apache Directory Listings</a>
+    <br><br>
+    <a href="#" onclick='shodin(`"220" "230 Login successful." port:21`)'>Unauthorized FTP Server</a>
+    </div>
+    <div id="end" style="font-family: Merienda One;text-align: center;padding: 7px 0;font-size:20px;">by Spy097  thank to Mr.Koanti Shodin dorks</div></div>
+    </div>
+</body>
+</html>
